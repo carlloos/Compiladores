@@ -32,7 +32,7 @@ class Lexer:
                 if self.newLine():
                     self.content = list(self.txtline)
                 else:
-                    return Token(ReservedDict.etc["ETC_EOF"], "EOF", self.row, self.col)
+                    return Token(Tokens.tokenDict["DELI_EOF"], "DELI_EOF", "EOF", self.row, self.col)
 
             curr_char = self.getNextChar()
             curr_state = None
@@ -99,8 +99,8 @@ class Lexer:
 
         if tmp != '':
             self.txtline = tmp
-
-            print(f"{self.row} {self.txtline}")
+            printmessage = "{:>4}  " + self.txtline
+            print(printmessage.format(int(self.row)))
 
             self.txtline += " "
             self.row += 1
