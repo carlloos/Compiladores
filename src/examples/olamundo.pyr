@@ -1,4 +1,4 @@
-Funcao Int Central() Initiate
+Funcao Vazio Central() Initiate
 
     Escrever('Alô mundo!')
 
