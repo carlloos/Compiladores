@@ -96,9 +96,20 @@ class Lexer:
 
         except IOError as e:
             traceback.print_exc()
-
+        aux = ''
+        is_on = True
         if tmp != '':
-            self.txtline = tmp
+            for i in tmp:
+                if i == ' ' and is_on:
+                    pass
+                elif i == ' ' and not is_on:
+                    aux = aux + i
+                elif i != ' ':
+                    is_on = False
+                    aux = aux + i
+
+
+            self.txtline = aux
             printmessage = "{:>4}  " + self.txtline
             print(printmessage.format(int(self.row)))
 

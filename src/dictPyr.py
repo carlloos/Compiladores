@@ -60,6 +60,7 @@ class Tokens:
                  "DELI_COMMA": 53,
                  "DELI_SECOL": 54,
                  "DELI_EOF": 55,
+                 "DELI_ASP": 890,
                  # Erros
                  "ERR_UNK": 56,
                  "ERR_IND": 57,
