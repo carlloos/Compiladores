@@ -1,46 +1,29 @@
 Funcao Vazio fibonacci (Int n) Initiate
-
     Int n1 = 0;
     Int n2 = 1;
     Int n3;
-    
-    Escrever(n)
-    
+    Escrever(n);
     Se ( n == 1 ) Initiate
-    
-        Escrever ("0, ", n)
-        
+        Escrever ("0, ", n);
     Halt
-    
+
     SeNao  Initiate
-        
         Char separador = ',';
         Escrever("0, 1, ");
-        
         Enquanto (Verdadeiro) Initiate
-            
             n3 = n1+n2;
             Se (n3 > n) Initiate
                 Retorna;
             Halt
-            
             Escrever(separador, " ", n3)
             n1 = n2;
             n2 = n3;
-        
         Halt
-    
     Halt
-
 Halt
 
-
-
 Funcao Vazio Central() Initiate
-
     Int n;
     Ler(n);
     fibonacci(n);
-
-
 Halt

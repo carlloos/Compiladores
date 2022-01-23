@@ -2,63 +2,42 @@ Funcao Vazio shellsort(Int array[ ], Int n) Initiate
 		Int c;
 		Int j;
         Int m = 1;
-
         Enquanto (m < n) Initiate
 			m = m * 3 + 1;
 		Halt
-
 		m = m / 3;
-
 		Enquanto(m > 0) Initiate
-
 			Loop (Int i = m, 1, n) Initiate
-
                     c = array[i];
                     j = i;
-
-                    Enquanto (j >= m E array[j - m] > c) Initiate
-
+                    Enquanto (j >= m & array[j - m] > c) Initiate
                             array[j] = array[j - m];
                             j = j - m;
-
                     Halt
-
                     array[j] = c;
 			Halt
-
 			m = m / 2;
-        
 		Halt
-
 		Retorna;
-
 	Halt
 
 Funcao Vazio Central() Initiate
 		Int n;
 		Int atual;
-
-		Escrever('Tamanho do array: ');
+		Escrever("Tamanho do array:");
 		Ler(n);
-
 		Int array[n];
-
-		Escrever('Elementos do array: ');
-
+		Escrever("Elementos do array: ");
         Loop (Int i = 0, 1, n) Initiate
 	        Ler(array[i]);
         Halt
-
-        Escrever('Array: ');
-
+        Escrever("Array: ");
         Loop (Int i = 0, 1, n) Initiate
             atual = array[i];
 	        Escreverpl(atual);
         Halt
-
 		shellsort(array[n], n);
-
-		Escrever('Valores ordenados: ');
+		Escrever("Valores ordenados: ");
 
         Loop (Int i = 0, 1, n) Initiate
             atual = array[i];
