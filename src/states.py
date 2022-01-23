@@ -1,20 +1,10 @@
 from dictPyr import *
 from tkn import *
 from validate import *
+from auxfile import aux_dict
 
 
 class State (ABC):
-    aux_dict = {'Initiate': "RESE_INITIATE", 'Halt': "RESE_HALT", 'Central': "RESE_CENTRAL", 'Funcao': "RESE_FUNCAO",
-                'Retorna': "RESE_RETORNA", 'Int': "RESE_INT",'Str': "RESE_STR", 'Float': "RESE_FLOAT",
-                'Char': "RESE_CHAR", 'Bool': "RESE_BOOL", "Array": "RESE_ARRAY", "Vazio": "RESE_VAZIO",
-                'Verdadeiro': "RESE_VERDADE", 'Falso': "RESE_FALSO", 'Se': "RESE_SE", 'SeNao': "RESE_SENAO",
-                'Loop': "RESE_LOOP", "Enquanto": "RESE_ENQUANTO", "Nulo": "RESE_NULO", "Pare": "RESE_PARE",
-                "Ler": "RESE_LER", "Escrever": "RESE_ESCREVER", "Escreverpl": "RESE_ESCREVERPL", "&": "OPE_CONJUN",
-                "|": "OPE_DISJUN", "+": "OPE_ADI", "-": "OPE_SUB", "*": "OPE_MULTI",  "/": "OPE_DIV",
-                "%": "OPE_REST", "=": "OPE_ATRI", "==": "OPE_IGUAL", "!=": "OPE_DIFE", "^": "OPE_POTEN",
-                "<": "OPE_MENORQ", ">": "OPE_MAIORQ", "<=": "OPE_MENORI", ">=": "OPE_MAIORI", "!": "OPE_NEGA",
-                "@": "OPE_CONCAT", '(': "DELI_OPAREN", ')': "DELI_CPAREN", ']': "DELI_ENBRA", '[': "DELI_OPBRA",
-                ',': "DELI_COMMA", ';': "DELI_SECOL"}
 
     def __init__(self, lexer):
         self.lexer = lexer
@@ -27,46 +17,46 @@ class State (ABC):
 class StateZero(State):
     def processState(self, curr_char):
         if Blank(curr_char).validate():
-            self.lexer.state = 0
+            self.lexer.state = StateZero(self.lexer)
 
         elif LowerCase(curr_char).validate():
             self.lexer.lexem += curr_char
-            self.lexer.state = 1
+            self.lexer.state = StateOne(self.lexer)
 
         elif Digit(curr_char).validate():
             self.lexer.lexem += curr_char
-            self.lexer.state = 3
+            self.lexer.state = StateThree(self.lexer)
 
         elif Operator(curr_char).validate():
             self.lexer.lexem += curr_char
-            self.lexer.state = 7
+            self.lexer.state = StateSeven(self.lexer)
 
         elif curr_char == '\'':
             self.lexer.lexem += curr_char
-            self.lexer.state = 8
+            self.lexer.state = StateEight(self.lexer)
 
         elif curr_char == '\"':
             self.lexer.lexem += curr_char
-            self.lexer.state = 10
+            self.lexer.state = StateTen(self.lexer)
 
         elif UpperCase(curr_char).validate():
             self.lexer.lexem += curr_char
-            self.lexer.state = 11
+            self.lexer.state = StateEleven(self.lexer)
 
         elif curr_char == '#':
             self.lexer.lexem += curr_char
-            self.lexer.state = 13
+            self.lexer.state = StateThirteen(self.lexer)
 
-        elif curr_char in ['+', '-', '*', '/', '%', '*', '@']:  # UNARINEG POW
+        elif curr_char in ['+', '-', '*', '/', '%', '@', '^', '&', '|']:
             self.lexer.lexem += curr_char
             self.lexer.col += 1
-            aux = self.aux_dict[curr_char]
+            aux = aux_dict[curr_char]
             return Token(Tokens.tokenDict[aux], aux, self.lexer.lexem, self.lexer.row, self.lexer.col)
 
         elif curr_char in ['(', ')', '[', ']', ';', ',']:
             self.lexer.lexem += curr_char
             self.lexer.col += 1
-            aux = self.aux_dict[curr_char]
+            aux = aux_dict[curr_char]
             return Token(Tokens.tokenDict[aux], aux, self.lexer.lexem, self.lexer.row, self.lexer.col)
 
         else:
@@ -82,7 +72,7 @@ class StateOne(State):  # ID State
 
         elif Operator(curr_char).validate() or Blank(curr_char).validate() or not Alphanum(curr_char).validate():
             self.lexer.back()
-            self.lexer.state = 2
+            self.lexer.state = StateTwo(self.lexer)
 
         else:
             self.lexer.col += 1
@@ -100,7 +90,7 @@ class StateThree(State):  # State that defines numeric CNST
     def processState(self, curr_char):
         if curr_char == '.':
             self.lexer.lexem += curr_char
-            self.lexer.state = 4
+            self.lexer.state = StateFour(self.lexer)
             self.lexer.col = +1
 
         elif Digit(curr_char).validate():
@@ -108,7 +98,7 @@ class StateThree(State):  # State that defines numeric CNST
 
         elif not Alphanum(curr_char).validate():
             self.lexer.back()
-            self.lexer.state = 5
+            self.lexer.state = StateFive(self.lexer)
 
         else:
             self.lexer.col += 1
@@ -122,7 +112,7 @@ class StateFour(State):  # State for float decimal part
 
         elif Operator(curr_char).validate() or Blank(curr_char).validate() or not Alphanum(curr_char).validate():
             self.lexer.back()
-            self.lexer.state = 6
+            self.lexer.state = StateSix(self.lexer)
 
         else:
             self.lexer.col += 1
@@ -173,7 +163,7 @@ class StateSeven(State):  # State that defines Relacional operations "<, <=, >, 
                              self.lexer.col)
             else:
                 self.lexer.back()
-                return Token(Tokens.tokenDict['OPE_MENORQ'], 'OPE_MENORQ',self.lexer.lexem, self.lexer.row,
+                return Token(Tokens.tokenDict['OPE_MENORQ'], 'OPE_MENORQ', self.lexer.lexem, self.lexer.row,
                              self.lexer.col)
 
         elif curr_char == '!':
@@ -214,7 +204,7 @@ class StateEight(State):
 
             if curr_char == '\'':
                 self.lexer.lexem += curr_char
-                self.lexer.state = 9
+                self.lexer.state = StateNine(self.lexer)
 
             else:
                 while curr_char != '\'':
@@ -253,7 +243,7 @@ class StateEleven(State):  # State for process reserved words
                 self.lexer.lexem += curr_char
             else:
                 self.lexer.back()
-                self.lexer.state = 12
+                self.lexer.state = StateTwelve(self.lexer)
 
         elif LowerCase(curr_char).validate():
             self.lexer.lexem += curr_char
@@ -263,7 +253,7 @@ class StateTwelve(State):  # Final state for reserved words
     def processState(self, curr_char):
         self.lexer.back()
         self.lexer.col += 1
-        aux_category = self.aux_dict[self.lexer.lexem]
+        aux_category = aux_dict[self.lexer.lexem]
         if Tokens.tokenDict[aux_category] is not None:
             return Token(Tokens.tokenDict[aux_category], aux_category, self.lexer.lexem, self.lexer.row,
                      self.lexer.col)
@@ -281,6 +271,6 @@ class StateThirteen(State):  # Estado comentários
         self.lexer.newLine()
         self.lexer.content = self.lexer.txtline
         self.lexer.lexem = ''
-        self.lexer.state = 0
+        self.lexer.state = StateZero(self.lexer)
 
 

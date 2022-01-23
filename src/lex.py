@@ -24,7 +24,7 @@ class Lexer:
         return self.content[self.pos - 1]
 
     def nextToken(self):
-        self.state = 0
+        self.state = StateZero(self)
         self.lexem = ""
         while True:
 
@@ -35,52 +35,9 @@ class Lexer:
                     return Token(Tokens.tokenDict["DELI_EOF"], "DELI_EOF", "EOF", self.row, self.col)
 
             curr_char = self.getNextChar()
-            curr_state = None
             check = None
 
-            if self.state == 0:
-                curr_state = StateZero(self)
-
-            elif self.state == 1:
-                curr_state = StateOne(self)
-
-            elif self.state == 2:
-                curr_state = StateTwo(self)
-
-            elif self.state == 3:
-                curr_state = StateThree(self)
-
-            elif self.state == 4:
-                curr_state = StateFour(self)
-
-            elif self.state == 5:
-                curr_state = StateFive(self)
-
-            elif self.state == 6:
-                curr_state = StateSix(self)
-
-            elif self.state == 7:
-                curr_state = StateSeven(self)
-
-            elif self.state == 8:
-                curr_state = StateEight(self)
-
-            elif self.state == 9:
-                curr_state = StateNine(self)
-
-            elif self.state == 10:
-                curr_state = StateTen(self)
-
-            elif self.state == 11:
-                curr_state = StateEleven(self)
-
-            elif self.state == 12:
-                curr_state = StateTwelve(self)
-
-            elif self.state == 13:
-                curr_state = StateThirteen(self)
-
-            check = curr_state.processState(curr_char)
+            check = self.state.processState(curr_char)
             if check:
                 return check
 
@@ -100,16 +57,16 @@ class Lexer:
         is_on = True
         if tmp != '':
             for i in tmp:
-                if i == ' ' and is_on:
+                if Blank(i).validate() and is_on:
                     pass
-                elif i == ' ' and not is_on:
+                elif not is_on:
                     aux = aux + i
-                elif i != ' ':
+                elif not (Blank(i).validate()) and Alphanum(i).validate():
                     is_on = False
                     aux = aux + i
 
 
-            self.txtline = aux
+            self.txtline = aux.replace('\n', '')
             printmessage = "{:>4}  " + self.txtline
             print(printmessage.format(int(self.row)))
 
