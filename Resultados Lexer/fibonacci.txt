@@ -1,0 +1,143 @@
+   1  Funcao Vazio fibonacci (Int n) Initiate
+              [   1,    1] (   4,          RESE_FUNCAO) (Funcao)
+              [   1,    2] (  11,           RESE_VAZIO) (Vazio)
+              [   1,    3] (  41,                   ID) (fibonacci)
+              [   1,    4] (  47,          DELI_OPAREN) (()
+              [   1,    5] (   6,             RESE_INT) (Int)
+              [   1,    6] (  41,                   ID) (n)
+              [   1,    7] (  48,          DELI_CPAREN) ())
+              [   1,    8] (   1,        RESE_INITIATE) (Initiate)
+   2  Int n1 = 0;
+              [   2,    1] (   6,             RESE_INT) (Int)
+              [   2,    2] (  41,                   ID) (n1)
+              [   2,    3] (  31,             OPE_ATRI) (=)
+              [   2,    4] (  42,             CNST_INT) (0)
+              [   2,    5] (  52,           DELI_SECOL) (;)
+   3  Int n2 = 1;
+              [   3,    1] (   6,             RESE_INT) (Int)
+              [   3,    2] (  41,                   ID) (n2)
+              [   3,    3] (  31,             OPE_ATRI) (=)
+              [   3,    4] (  42,             CNST_INT) (1)
+              [   3,    5] (  52,           DELI_SECOL) (;)
+   4  Int n3;
+              [   4,    1] (   6,             RESE_INT) (Int)
+              [   4,    2] (  41,                   ID) (n3)
+              [   4,    3] (  52,           DELI_SECOL) (;)
+   5  Escrever(n);
+              [   5,    1] (  21,        RESE_ESCREVER) (Escrever)
+              [   5,    2] (  47,          DELI_OPAREN) (()
+              [   5,    3] (  41,                   ID) (n)
+              [   5,    4] (  48,          DELI_CPAREN) ())
+              [   5,    5] (  52,           DELI_SECOL) (;)
+   6  Se ( n == 1 ) Initiate
+              [   6,    1] (  14,              RESE_SE) (Se)
+              [   6,    2] (  47,          DELI_OPAREN) (()
+              [   6,    3] (  41,                   ID) (n)
+              [   6,    4] (  33,            OPE_IGUAL) (==)
+              [   6,    5] (  42,             CNST_INT) (1)
+              [   6,    6] (  48,          DELI_CPAREN) ())
+              [   6,    7] (   1,        RESE_INITIATE) (Initiate)
+   7  Escrever ("0, ", n);
+              [   7,    1] (  21,        RESE_ESCREVER) (Escrever)
+              [   7,    2] (  47,          DELI_OPAREN) (()
+              [   7,    3] (  46,             CNST_STR) ("0, ")
+              [   7,    4] (  51,           DELI_COMMA) (,)
+              [   7,    5] (  41,                   ID) (n)
+              [   7,    6] (  48,          DELI_CPAREN) ())
+              [   7,    7] (  52,           DELI_SECOL) (;)
+   8  Halt
+              [   8,    1] (   2,            RESE_HALT) (Halt)
+   9
+  10  SeNao  Initiate
+              [  10,    1] (  15,           RESE_SENAO) (SeNao)
+              [  10,    2] (   1,        RESE_INITIATE) (Initiate)
+  11  Char separador = ',';
+              [  11,    1] (   9,            RESE_CHAR) (Char)
+              [  11,    2] (  41,                   ID) (separador)
+              [  11,    3] (  31,             OPE_ATRI) (=)
+              [  11,    4] (  45,            CNST_CHAR) (',')
+              [  11,    5] (  52,           DELI_SECOL) (;)
+  12  Escrever("0, 1, ");
+              [  12,    1] (  21,        RESE_ESCREVER) (Escrever)
+              [  12,    2] (  47,          DELI_OPAREN) (()
+              [  12,    3] (  46,             CNST_STR) ("0, 1, ")
+              [  12,    4] (  48,          DELI_CPAREN) ())
+              [  12,    5] (  52,           DELI_SECOL) (;)
+  13  Enquanto (Verdadeiro) Initiate
+              [  13,    1] (  17,        RESE_ENQUANTO) (Enquanto)
+              [  13,    2] (  47,          DELI_OPAREN) (()
+              [  13,    3] (  12,         RESE_VERDADE) (Verdadeiro)
+              [  13,    4] (  48,          DELI_CPAREN) ())
+              [  13,    5] (   1,        RESE_INITIATE) (Initiate)
+  14  n3 = n1+n2;
+              [  14,    1] (  41,                   ID) (n3)
+              [  14,    2] (  31,             OPE_ATRI) (=)
+              [  14,    3] (  41,                   ID) (n1)
+              [  14,    4] (  25,              OPE_ADI) (+)
+              [  14,    5] (  41,                   ID) (n2)
+              [  14,    6] (  52,           DELI_SECOL) (;)
+  15  Se (n3 > n) Initiate
+              [  15,    1] (  14,              RESE_SE) (Se)
+              [  15,    2] (  47,          DELI_OPAREN) (()
+              [  15,    3] (  41,                   ID) (n3)
+              [  15,    4] (  36,           OPE_MAIORQ) (>)
+              [  15,    5] (  41,                   ID) (n)
+              [  15,    6] (  48,          DELI_CPAREN) ())
+              [  15,    7] (   1,        RESE_INITIATE) (Initiate)
+  16  Retorna;
+              [  16,    1] (   5,         RESE_RETORNA) (Retorna)
+              [  16,    2] (  52,           DELI_SECOL) (;)
+  17  Halt
+              [  17,    1] (   2,            RESE_HALT) (Halt)
+  18  Escrever(separador, " ", n3)
+              [  18,    1] (  21,        RESE_ESCREVER) (Escrever)
+              [  18,    2] (  47,          DELI_OPAREN) (()
+              [  18,    3] (  41,                   ID) (separador)
+              [  18,    4] (  51,           DELI_COMMA) (,)
+              [  18,    5] (  46,             CNST_STR) (" ")
+              [  18,    6] (  51,           DELI_COMMA) (,)
+              [  18,    7] (  41,                   ID) (n3)
+              [  18,    8] (  48,          DELI_CPAREN) ())
+  19  n1 = n2;
+              [  19,    1] (  41,                   ID) (n1)
+              [  19,    2] (  31,             OPE_ATRI) (=)
+              [  19,    3] (  41,                   ID) (n2)
+              [  19,    4] (  52,           DELI_SECOL) (;)
+  20  n2 = n3;
+              [  20,    1] (  41,                   ID) (n2)
+              [  20,    2] (  31,             OPE_ATRI) (=)
+              [  20,    3] (  41,                   ID) (n3)
+              [  20,    4] (  52,           DELI_SECOL) (;)
+  21  Halt
+              [  21,    1] (   2,            RESE_HALT) (Halt)
+  22  Halt
+              [  22,    1] (   2,            RESE_HALT) (Halt)
+  23  Halt
+              [  23,    1] (   2,            RESE_HALT) (Halt)
+  24
+  25  Funcao Vazio Central() Initiate
+              [  25,    1] (   4,          RESE_FUNCAO) (Funcao)
+              [  25,    2] (  11,           RESE_VAZIO) (Vazio)
+              [  25,    3] (   3,         RESE_CENTRAL) (Central)
+              [  25,    4] (  47,          DELI_OPAREN) (()
+              [  25,    5] (  48,          DELI_CPAREN) ())
+              [  25,    6] (   1,        RESE_INITIATE) (Initiate)
+  26  Int n;
+              [  26,    1] (   6,             RESE_INT) (Int)
+              [  26,    2] (  41,                   ID) (n)
+              [  26,    3] (  52,           DELI_SECOL) (;)
+  27  Ler(n);
+              [  27,    1] (  20,             RESE_LER) (Ler)
+              [  27,    2] (  47,          DELI_OPAREN) (()
+              [  27,    3] (  41,                   ID) (n)
+              [  27,    4] (  48,          DELI_CPAREN) ())
+              [  27,    5] (  52,           DELI_SECOL) (;)
+  28  fibonacci(n);
+              [  28,    1] (  41,                   ID) (fibonacci)
+              [  28,    2] (  47,          DELI_OPAREN) (()
+              [  28,    3] (  41,                   ID) (n)
+              [  28,    4] (  48,          DELI_CPAREN) ())
+              [  28,    5] (  52,           DELI_SECOL) (;)
+  29  Halt
+              [  29,    1] (   2,            RESE_HALT) (Halt)
+              [  29,    1] (  53,             DELI_EOF) (EOF)

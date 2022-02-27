@@ -1,0 +1,16 @@
+   1  Funcao Vazio Central() Initiate
+              [   1,    1] (   4,          RESE_FUNCAO) (Funcao)
+              [   1,    2] (  11,           RESE_VAZIO) (Vazio)
+              [   1,    3] (   3,         RESE_CENTRAL) (Central)
+              [   1,    4] (  47,          DELI_OPAREN) (()
+              [   1,    5] (  48,          DELI_CPAREN) ())
+              [   1,    6] (   1,        RESE_INITIATE) (Initiate)
+   2  Escrever("Alô mundo!");
+              [   2,    1] (  21,        RESE_ESCREVER) (Escrever)
+              [   2,    2] (  47,          DELI_OPAREN) (()
+              [   2,    3] (  46,             CNST_STR) ("Alô mundo!")
+              [   2,    4] (  48,          DELI_CPAREN) ())
+              [   2,    5] (  52,           DELI_SECOL) (;)
+   3  Halt
+              [   3,    1] (   2,            RESE_HALT) (Halt)
+              [   3,    1] (  53,             DELI_EOF) (EOF)
