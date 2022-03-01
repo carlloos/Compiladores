@@ -15,9 +15,9 @@ Funcao Vazio fibonacci (Int n) Initiate
             Se (n3 > n) Initiate
                 Retorna;
             Halt
-            Escrever(separador, " ", n3)
-            n1 = n2;
-            n2 = n3;
+        Escrever(separador, " ", n3);
+        n1 = n2;
+        n2 = n3;
         Halt
     Halt
 Halt
