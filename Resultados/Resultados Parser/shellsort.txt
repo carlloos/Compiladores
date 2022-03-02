@@ -1,4 +1,4 @@
-1  Funcao Vazio shellsort(Int array[], Int n) Initiate
+   1  Funcao Vazio shellsort(Int array[], Int n) Initiate
           S = FunDecla S
           FunDecla = 'function' TipoFun FunNome '(' ParamsDecla ')' DelimiDecla
               [   1,    1] (   4,          RESE_FUNCAO) (Funcao)
@@ -28,31 +28,31 @@
           VarDecla = Tipo ListId ';'
           Tipo = 'Int'
               [   2,    1] (   6,             RESE_INT) (Int)
-          ListId = AtribOuId ListIdX
+          ListId = AtribOuId LListID
           AtrId =  = 'id' IdArr Atr
               [   2,    2] (  41,                   ID) (c)
           IdArr = epsilon
           Atr = epsilon
-          ListIdX = epsilon
+          LListId = epsilon
               [   2,    3] (  52,           DELI_SECOL) (;)
    3  Int j;
           Instru = VarDecla Instru
           VarDecla = Tipo ListId ';'
           Tipo = 'Int'
               [   3,    1] (   6,             RESE_INT) (Int)
-          ListId = AtribOuId ListIdX
+          ListId = AtribOuId LListID
           AtrId =  = 'id' IdArr Atr
               [   3,    2] (  41,                   ID) (j)
           IdArr = epsilon
           Atr = epsilon
-          ListIdX = epsilon
+          LListId = epsilon
               [   3,    3] (  52,           DELI_SECOL) (;)
    4  Int m = 1;
           Instru = VarDecla Instru
           VarDecla = Tipo ListId ';'
           Tipo = 'Int'
               [   4,    1] (   6,             RESE_INT) (Int)
-          ListId = AtribOuId ListIdX
+          ListId = AtribOuId LListID
           AtrId =  = 'id' IdArr Atr
               [   4,    2] (  41,                   ID) (m)
           IdArr = epsilon
@@ -76,9 +76,9 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
-          ListIdX = epsilon
+          LListId = epsilon
               [   4,    5] (  52,           DELI_SECOL) (;)
    5  Enquanto (m < n) Initiate
           Instru = Comando Instru
@@ -116,7 +116,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
               [   5,    6] (  48,          DELI_CPAREN) ())
           DelimiDecla = 'Initiate' Instru 'Halt'
               [   5,    7] (   1,        RESE_INITIATE) (Initiate)
@@ -167,7 +167,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
               [   6,    8] (  52,           DELI_SECOL) (;)
    7  Halt
@@ -209,7 +209,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
               [   8,    6] (  52,           DELI_SECOL) (;)
    9  Enquanto(m > 0) Initiate
@@ -247,7 +247,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
               [   9,    6] (  48,          DELI_CPAREN) ())
           DelimiDecla = 'Initiate' Instru 'Halt'
               [   9,    7] (   1,        RESE_INITIATE) (Initiate)
@@ -310,7 +310,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
               [  11,    7] (  52,           DELI_SECOL) (;)
   12  j = i;
@@ -340,7 +340,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
               [  12,    4] (  52,           DELI_SECOL) (;)
   13  Enquanto (j >= m & array[j - m] > c) Initiate
@@ -434,7 +434,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
               [  13,   15] (  48,          DELI_CPAREN) ())
           DelimiDecla = 'Initiate' Instru 'Halt'
               [  13,   16] (   1,        RESE_INITIATE) (Initiate)
@@ -503,7 +503,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
               [  14,   12] (  52,           DELI_SECOL) (;)
   15  j = j - m;
@@ -545,7 +545,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
               [  15,    6] (  52,           DELI_SECOL) (;)
   16  Halt
@@ -591,7 +591,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
               [  17,    7] (  52,           DELI_SECOL) (;)
   18  Halt
@@ -633,7 +633,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
               [  19,    6] (  52,           DELI_SECOL) (;)
   20  Halt
@@ -667,24 +667,24 @@
           VarDecla = Tipo ListId ';'
           Tipo = 'Int'
               [  25,    1] (   6,             RESE_INT) (Int)
-          ListId = AtribOuId ListIdX
+          ListId = AtribOuId LListID
           AtrId =  = 'id' IdArr Atr
               [  25,    2] (  41,                   ID) (n)
           IdArr = epsilon
           Atr = epsilon
-          ListIdX = epsilon
+          LListId = epsilon
               [  25,    3] (  52,           DELI_SECOL) (;)
   26  Int atual;
           Instru = VarDecla Instru
           VarDecla = Tipo ListId ';'
           Tipo = 'Int'
               [  26,    1] (   6,             RESE_INT) (Int)
-          ListId = AtribOuId ListIdX
+          ListId = AtribOuId LListID
           AtrId =  = 'id' IdArr Atr
               [  26,    2] (  41,                   ID) (atual)
           IdArr = epsilon
           Atr = epsilon
-          ListIdX = epsilon
+          LListId = epsilon
               [  26,    3] (  52,           DELI_SECOL) (;)
   27  Escrever("Tamanho do array:");
           Instru = Comando Instru
@@ -709,7 +709,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
           LParamCall = epsilon
               [  27,    4] (  48,          DELI_CPAREN) ())
@@ -731,7 +731,7 @@
           VarDecla = Tipo ListId ';'
           Tipo = 'Int'
               [  29,    1] (   6,             RESE_INT) (Int)
-          ListId = AtribOuId ListIdX
+          ListId = AtribOuId LListID
           AtrId =  = 'id' IdArr Atr
               [  29,    2] (  41,                   ID) (array)
           IdArr = ExpA
@@ -749,7 +749,7 @@
           LExpA = epsilon
               [  29,    5] (  49,           DELI_ENBRA) (])
           Atr = epsilon
-          ListIdX = epsilon
+          LListId = epsilon
               [  29,    6] (  52,           DELI_SECOL) (;)
   30  Escrever("Elementos do array: ");
           Instru = Comando Instru
@@ -774,7 +774,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
           LParamCall = epsilon
               [  30,    4] (  48,          DELI_CPAREN) ())
@@ -849,7 +849,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
           LParamCall = epsilon
               [  34,    4] (  48,          DELI_CPAREN) ())
@@ -913,7 +913,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
               [  36,    7] (  52,           DELI_SECOL) (;)
   37  Escreverpl(atual);
@@ -940,7 +940,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
           LParamCall = epsilon
               [  37,    4] (  48,          DELI_CPAREN) ())
@@ -987,7 +987,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
           LParamCall = ',' ParamCall
               [  39,    7] (  51,           DELI_COMMA) (,)
@@ -1010,7 +1010,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
           LParamCall = epsilon
               [  39,    9] (  48,          DELI_CPAREN) ())
@@ -1038,7 +1038,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
           LParamCall = epsilon
               [  40,    4] (  48,          DELI_CPAREN) ())
@@ -1103,7 +1103,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
               [  43,    7] (  52,           DELI_SECOL) (;)
   44  Escreverpl(atual);
@@ -1130,7 +1130,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
           LParamCall = epsilon
               [  44,    4] (  48,          DELI_CPAREN) ())
