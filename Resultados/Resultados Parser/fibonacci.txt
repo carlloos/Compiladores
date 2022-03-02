@@ -20,7 +20,7 @@
           VarDecla = Tipo ListId ';'
           Tipo = 'Int'
               [   2,    1] (   6,             RESE_INT) (Int)
-          ListId = AtribOuId ListIdX
+          ListId = AtribOuId LListID
           AtrId =  = 'id' IdArr Atr
               [   2,    2] (  41,                   ID) (n1)
           IdArr = epsilon
@@ -53,7 +53,7 @@
           VarDecla = Tipo ListId ';'
           Tipo = 'Int'
               [   3,    1] (   6,             RESE_INT) (Int)
-          ListId = AtribOuId ListIdX
+          ListId = AtribOuId LListID
           AtrId =  = 'id' IdArr Atr
               [   3,    2] (  41,                   ID) (n2)
           IdArr = epsilon
@@ -86,7 +86,7 @@
           VarDecla = Tipo ListId ';'
           Tipo = 'Int'
               [   4,    1] (   6,             RESE_INT) (Int)
-          ListId = AtribOuId ListIdX
+          ListId = AtribOuId LListID
           AtrId =  = 'id' IdArr Atr
               [   4,    2] (  41,                   ID) (n3)
           IdArr = epsilon
@@ -225,7 +225,7 @@
           VarDecla = Tipo ListId ';'
           Tipo = 'Char'
               [  11,    1] (   9,            RESE_CHAR) (Char)
-          ListId = AtribOuId ListIdX
+          ListId = AtribOuId LListID
           AtrId =  = 'id' IdArr Atr
               [  11,    2] (  41,                   ID) (separador)
           IdArr = epsilon
@@ -560,7 +560,7 @@
           VarDecla = Tipo ListId ';'
           Tipo = 'Int'
               [  26,    1] (   6,             RESE_INT) (Int)
-          ListId = AtribOuId ListIdX
+          ListId = AtribOuId LListID
           AtrId =  = 'id' IdArr Atr
               [  26,    2] (  41,                   ID) (n)
           IdArr = epsilon
