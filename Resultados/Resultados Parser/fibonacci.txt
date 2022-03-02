@@ -44,9 +44,9 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
-          ListIdX = epsilon
+          LListId = epsilon
               [   2,    5] (  52,           DELI_SECOL) (;)
    3  Int n2 = 1;
           Instru = VarDecla Instru
@@ -77,9 +77,9 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
-          ListIdX = epsilon
+          LListId = epsilon
               [   3,    5] (  52,           DELI_SECOL) (;)
    4  Int n3;
           Instru = VarDecla Instru
@@ -91,7 +91,7 @@
               [   4,    2] (  41,                   ID) (n3)
           IdArr = epsilon
           Atr = epsilon
-          ListIdX = epsilon
+          LListId = epsilon
               [   4,    3] (  52,           DELI_SECOL) (;)
    5  Escrever(n);
           Instru = Comando Instru
@@ -117,7 +117,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
           LParamCall = epsilon
               [   5,    4] (  48,          DELI_CPAREN) ())
@@ -157,7 +157,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
               [   6,    6] (  48,          DELI_CPAREN) ())
           DelimiDecla = 'Initiate' Instru 'Halt'
               [   6,    7] (   1,        RESE_INITIATE) (Initiate)
@@ -184,7 +184,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
           LParamCall = ',' ParamCall
               [   7,    4] (  51,           DELI_COMMA) (,)
@@ -207,7 +207,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
           LParamCall = epsilon
               [   7,    6] (  48,          DELI_CPAREN) ())
@@ -249,9 +249,9 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
-          ListIdX = epsilon
+          LListId = epsilon
               [  11,    5] (  52,           DELI_SECOL) (;)
   12  Escrever("0, 1, ");
           Instru = Comando Instru
@@ -276,7 +276,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
           LParamCall = epsilon
               [  12,    4] (  48,          DELI_CPAREN) ())
@@ -302,7 +302,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
               [  13,    4] (  48,          DELI_CPAREN) ())
           DelimiDecla = 'Initiate' Instru 'Halt'
               [  13,    5] (   1,        RESE_INITIATE) (Initiate)
@@ -345,7 +345,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
               [  14,    6] (  52,           DELI_SECOL) (;)
   15  Se (n3 > n) Initiate
@@ -384,7 +384,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
               [  15,    6] (  48,          DELI_CPAREN) ())
           DelimiDecla = 'Initiate' Instru 'Halt'
               [  15,    7] (   1,        RESE_INITIATE) (Initiate)
@@ -422,7 +422,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
           LParamCall = ',' ParamCall
               [  18,    4] (  51,           DELI_COMMA) (,)
@@ -444,7 +444,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
           LParamCall = ',' ParamCall
               [  18,    6] (  51,           DELI_COMMA) (,)
@@ -467,7 +467,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
           LParamCall = epsilon
               [  18,    8] (  48,          DELI_CPAREN) ())
@@ -499,7 +499,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
               [  19,    4] (  52,           DELI_SECOL) (;)
   20  n2 = n3;
@@ -529,7 +529,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
               [  20,    4] (  52,           DELI_SECOL) (;)
   21  Halt
@@ -565,7 +565,7 @@
               [  26,    2] (  41,                   ID) (n)
           IdArr = epsilon
           Atr = epsilon
-          ListIdX = epsilon
+          LListId = epsilon
               [  26,    3] (  52,           DELI_SECOL) (;)
   27  Ler(n);
           Instru = Comando Instru
@@ -605,7 +605,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
           LParamCall = epsilon
               [  28,    4] (  48,          DELI_CPAREN) ())
