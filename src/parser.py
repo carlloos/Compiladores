@@ -16,6 +16,11 @@ class Parser:
         self.S()
 
 
+    def printError(self, exceptmessage):
+        print('Error: Expecting ' + exceptmessage)
+
+
+
     def updateToken(self):
         self.curr = self.lex.nextToken()
         self.lookahead = self.lex.lexem
@@ -36,7 +41,7 @@ class Parser:
                 self.VarDecla()
 
             else:
-                print("erro") #expected type, const or func
+                self.printError('int, float, bool, char, str, func ou const')
 
             self.S()
 
@@ -45,7 +50,7 @@ class Parser:
             print(self.curr.toString())
 
         else:
-            print("erro")  # expected type, const, func, id or eof
+            self.printError('int, float, bool, char, str, func, const, id ou eof')
 
 
     def FunDecla(self):
@@ -69,9 +74,9 @@ class Parser:
                     self.DelimiDecla()
                 else:
                     print(self.lookahead)
-                    print("71 erro )")
+                    self.printError(')')
             else:
-                print("erro (")
+                self.printError('(')
         else:
             print("erro FUNCAO")
 
@@ -86,7 +91,7 @@ class Parser:
             self.Tipo()
 
         else:
-            print("erro tipo")
+            self.printError('int, float, char, bool ou str')
 
     def FunNome(self):
         if self.l1category == "RESE_CENTRAL":
@@ -98,7 +103,7 @@ class Parser:
             print(self.curr.toString())
             self.updateToken()
         else:
-            print("erro main id")
+            self.printError('funcao central ou id')
 
     def Tipo(self):
         if self.l1category == "RESE_FLOAT":
@@ -122,7 +127,7 @@ class Parser:
             print(self.curr.toString())
 
         else:
-            print("erro tipos")
+            self.printError('int, float, char, bool ou str')
 
         self.updateToken()
 
@@ -138,7 +143,7 @@ class Parser:
                 self.Array()
                 self.LParamDecla()
             else:
-                print("erro id")
+                self.printError('id')
         else:
             self.printProd("ParamDecla", eps)
 
@@ -187,7 +192,7 @@ class Parser:
                 print(self.curr.toString())
                 self.updateToken()
             else:
-                print("erro )")
+                self.printError(')')
 
         elif self.l1category == "DELI_OPBRA":
             self.printProd("FuncCallArr", "'[' ExpA ']'")
@@ -199,7 +204,7 @@ class Parser:
                 print(self.curr.toString())
                 self.updateToken()
             else:
-                print("erro ]")
+                self.printError(']')
 
         else:
             self.printProd("FuncCallArr", eps)
@@ -227,11 +232,11 @@ class Parser:
                     print(self.curr.toString())
                     self.updateToken()
                 else:
-                    print("erro ;")
+                    self.printError(';')
             else:
-                print("erro )")
+                self.printError(')')
         else:
-            print("erro (")
+            self.printError('(')
 
 
 
@@ -244,7 +249,7 @@ class Parser:
             self.updateToken()
 
         else:
-            print("erro ;")
+            self.printError(';')
 
 
     def DelimiDecla(self):
@@ -259,9 +264,9 @@ class Parser:
                 self.updateToken()
 
             else:
-                print('erro Halt')
+                self.printError('Halt')
         else:
-            print("erro Initiate")
+            self.printError('Initiate')
 
     def Array(self):
         if self.l1category == "DELI_OPBRA":
@@ -273,7 +278,7 @@ class Parser:
                 print(self.curr.toString())
                 self.updateToken()
             else:
-                print("erro ]")
+                self.printError(']')
 
 
         else:
@@ -290,7 +295,7 @@ class Parser:
                 print(self.curr.toString())
                 self.updateToken()
             else:
-                print("erro ]")
+                self.printError(']')
 
 
         else:
@@ -338,7 +343,7 @@ class Parser:
                         print(self.curr.toString())
                         self.updateToken()
                     else:
-                        print("erro ;")
+                        self.printError(';')
 
         elif self.l1category == "RESE_ESCREVERPL":
             self.printProd("Comando", "'Escreverpl' '(' ParamCall ')' ';'")
@@ -357,7 +362,7 @@ class Parser:
                         print(self.curr.toString())
                         self.updateToken()
                     else:
-                        print("erro ;")
+                        self.printError(';')
 
         elif self.l1category == "RESE_LER":
             self.printProd("Comando", "'Ler' '(' Ler ')' ';'")
@@ -376,12 +381,12 @@ class Parser:
                         print(self.curr.toString())
                         self.updateToken()
                     else:
-                        print("erro ;")
+                        self.printError(';')
 
                 else:
-                    print("erro )")
+                    self.printError(')')
             else:
-                print("erro (")
+                self.printError('(')
 
         elif self.l1category == "RESE_ENQUANTO":
             self.printProd("Comando", "'Enquanto' '(' ExpEB ')' DelimiDecla")
@@ -399,9 +404,9 @@ class Parser:
                     self.DelimiDecla()
 
                 else:
-                    print("erro )")
+                    self.printError(')')
             else:
-                print("erro (")
+                self.printError('(')
 
         elif self.l1category == "RESE_SE":
             self.printProd("Comando", "'Se' '(' ExpEB ')' DelimiDecla Else")
@@ -420,9 +425,9 @@ class Parser:
                     self.Else()
 
                 else:
-                    print("erro )")
+                    self.printError(')')
             else:
-                print("erro (")
+                self.printError('(')
 
         elif self.l1category == "RESE_PARE":
             self.printProd("Comando", "'Pare';'")
@@ -435,7 +440,7 @@ class Parser:
 
 
             else:
-                print("erro ;")
+                self.printError(';')
 
         elif self.l1category == "RESE_RETORNA":
             self.printProd("Comando", "'Retorna' Return ';' Instru")
@@ -448,7 +453,7 @@ class Parser:
                 self.updateToken()
                 self.Instru()
             else:
-                print("erro ;")
+                self.printError(';')
 
         elif self.l1category == "RESE_LOOP":
             self.printProd("Comando", "'Loop' '(' Int ',' Int ',' Int ',' Incremen ')' DelimiDecla")
@@ -479,15 +484,15 @@ class Parser:
                                 self.DelimiDecla()
 
                             else:
-                                print("erro)")
+                                self.printError(')')
 
                     else:
-                        print("erro ,")
+                        self.printError(',')
 
                 else:
-                    print("erro ,")
+                    self.printError(',')
             else:
-                print("erro (")
+                self.printError('(')
 
     def Return(self):
         if self.l1category == "RESE_RETORNA":
@@ -499,7 +504,7 @@ class Parser:
                 print(self.curr.toString())
                 self.updateToken()
             else:
-                print("erro ;")
+                self.printError(';')
 
     def Retorna(self):
         if IsEconcFirst(self.l1category).check():
@@ -526,7 +531,7 @@ class Parser:
                 print(self.curr.toString())
                 self.updateToken()
             else:
-                print("erro id")
+                self.printError('id')
 
         elif self.l1category == "CNST_INT":
             self.printProd("Int", "'CNST_INT'")
@@ -645,7 +650,7 @@ class Parser:
                 self.updateToken()
 
             else:
-                print("erro )")
+                self.printError(')')
 
     def ExpC(self):
         self.printProd("ExpC", "ExpEB LExpC")
@@ -752,7 +757,7 @@ class Parser:
             self.updateToken()
 
         else:
-            print("erro relacionais")
+            self.printError('relacional operator')
 
 
     def OpePoten(self):
@@ -819,7 +824,7 @@ class Parser:
             self.updateToken()
 
         else:
-            print("erro constantes literais")
+            self.printError('literal constant')
 
 
     def Atr(self):
@@ -849,9 +854,9 @@ class Parser:
                 print(self.curr.toString())
                 self.updateToken()
             else:
-                print("erro ]")
+                self.printError(']')
         else:
-            print("erro [")
+            self.printError('[')
 
     def ArrS(self):
         self.printProd("ArrS", "ExpC LArrS")
@@ -895,7 +900,7 @@ class Parser:
             self.Atr()
 
         else:
-            print("erro id")
+            self.printError('id')
 
     def VarDecla(self):
         if IsType(self.l1category):
@@ -907,10 +912,10 @@ class Parser:
                 print(self.curr.toString())
                 self.updateToken()
             else:
-                print("erro ;")
+                self.printError(';')
 
         else:
-            print("erro token expected")
+            self.printError('int, float, bool, char ou str')
 
 
 Parser()
