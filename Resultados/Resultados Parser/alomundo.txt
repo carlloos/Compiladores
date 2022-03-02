@@ -34,7 +34,7 @@
           LExpA = epsilon
           LTiprelac = epsilon
           ExpOuB = epsilon
-          EboolX = epsilon
+          LExpEB = epsilon
           LexpC = epsilon
           LParamCall = epsilon
               [   2,    4] (  48,          DELI_CPAREN) ())
