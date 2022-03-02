@@ -1,0 +1,47 @@
+   1  Funcao Vazio Central() Initiate
+          S = FunDecla S
+          FunDecla = 'function' TipoFun FunNome '(' ParamsDecla ')' DelimiDecla
+              [   1,    1] (   4,          RESE_FUNCAO) (Funcao)
+          TipoFun = 'void'
+              [   1,    2] (  11,           RESE_VAZIO) (Vazio)
+          FunNome = 'Central'
+              [   1,    3] (   3,         RESE_CENTRAL) (Central)
+              [   1,    4] (  47,          DELI_OPAREN) (()
+          ParamDecla = epsilon
+              [   1,    5] (  48,          DELI_CPAREN) ())
+          DelimiDecla = 'Initiate' Instru 'Halt'
+              [   1,    6] (   1,        RESE_INITIATE) (Initiate)
+   2  Escrever("Alô mundo!");
+          Instru = Comando Instru
+          Comando = 'Escrever' '(' ParamCall ')' ';'
+              [   2,    1] (  21,        RESE_ESCREVER) (Escrever)
+              [   2,    2] (  47,          DELI_OPAREN) (()
+          ParamCall = ExpC LParamCall
+          ExpC = ExpEB LExpC
+          ExpEB = ExpOuB LExpEB
+          ExpOuB = ExpNB LExpOuB
+          ExpNB = Tiprelac
+          Tiprelac = ExpA LTiprelac
+          ExpA = Tiparit LExpA
+          Tiparit = Parit LTiparit
+          Parit = Farit LParit
+          Farit = LFarit
+          LFarit = Cte
+          Cte = 'CNST_STR'
+              [   2,    3] (  46,             CNST_STR) ("Alô mundo!")
+          LParit = epsilon
+          LTiparit = epsilon
+          LExpA = epsilon
+          LTiprelac = epsilon
+          ExpOuB = epsilon
+          EboolX = epsilon
+          LexpC = epsilon
+          LParamCall = epsilon
+              [   2,    4] (  48,          DELI_CPAREN) ())
+              [   2,    5] (  52,           DELI_SECOL) (;)
+   3  Halt
+          Instru = epsilon
+              [   3,    1] (   2,            RESE_HALT) (Halt)
+   4
+          S = epsilon
+              [   4,    0] (  53,             DELI_EOF) (EOF)
