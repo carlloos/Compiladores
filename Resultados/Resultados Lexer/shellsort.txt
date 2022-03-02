@@ -1,1152 +1,305 @@
    1  Funcao Vazio shellsort(Int array[], Int n) Initiate
-          S = FunDecla S
-          FunDecla = 'function' TipoFun FunNome '(' ParamsDecla ')' DelimiDecla
               [   1,    1] (   4,          RESE_FUNCAO) (Funcao)
-          TipoFun = 'void'
               [   1,    2] (  11,           RESE_VAZIO) (Vazio)
-          FunNome = 'id'
               [   1,    3] (  41,                   ID) (shellsort)
               [   1,    4] (  47,          DELI_OPAREN) (()
-          ParamDecla =  Tipo 'id' Arr LParamDecla
               [   1,    5] (   6,             RESE_INT) (Int)
               [   1,    6] (  41,                   ID) (array)
-          Array = '[' ']'
               [   1,    7] (  50,           DELI_OPBRA) ([)
               [   1,    8] (  49,           DELI_ENBRA) (])
-          LParamDecla = ',' ParamDecla
               [   1,    9] (  51,           DELI_COMMA) (,)
-          ParamDecla =  Tipo 'id' Arr LParamDecla
               [   1,   10] (   6,             RESE_INT) (Int)
               [   1,   11] (  41,                   ID) (n)
-          Arr = epsilon
-          LParamDecla = epsilon
               [   1,   12] (  48,          DELI_CPAREN) ())
-          DelimiDecla = 'Initiate' Instru 'Halt'
               [   1,   13] (   1,        RESE_INITIATE) (Initiate)
    2  Int c;
-          Instru = VarDecla Instru
-          VarDecla = Tipo ListId ';'
-          Tipo = 'Int'
               [   2,    1] (   6,             RESE_INT) (Int)
-          ListId = AtribOuId LListID
-          AtrId =  = 'id' IdArr Atr
               [   2,    2] (  41,                   ID) (c)
-          IdArr = epsilon
-          Atr = epsilon
-          LListId = epsilon
               [   2,    3] (  52,           DELI_SECOL) (;)
    3  Int j;
-          Instru = VarDecla Instru
-          VarDecla = Tipo ListId ';'
-          Tipo = 'Int'
               [   3,    1] (   6,             RESE_INT) (Int)
-          ListId = AtribOuId LListID
-          AtrId =  = 'id' IdArr Atr
               [   3,    2] (  41,                   ID) (j)
-          IdArr = epsilon
-          Atr = epsilon
-          LListId = epsilon
               [   3,    3] (  52,           DELI_SECOL) (;)
    4  Int m = 1;
-          Instru = VarDecla Instru
-          VarDecla = Tipo ListId ';'
-          Tipo = 'Int'
               [   4,    1] (   6,             RESE_INT) (Int)
-          ListId = AtribOuId LListID
-          AtrId =  = 'id' IdArr Atr
               [   4,    2] (  41,                   ID) (m)
-          IdArr = epsilon
-          Atr =  '=' ExpCArr
               [   4,    3] (  31,             OPE_ATRI) (=)
-          ExpCArr = ExpC
-          ExpC = ExpEB LExpC
-          ExpEB = ExpOuB LExpEB
-          ExpOuB = ExpNB LExpOuB
-          ExpNB = Tiprelac
-          Tiprelac = ExpA LTiprelac
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = Cte
-          Cte = 'CNST_INT'
               [   4,    4] (  42,             CNST_INT) (1)
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
-          LTiprelac = epsilon
-          ExpOuB = epsilon
-          LExpEB = epsilon
-          LexpC = epsilon
-          LListId = epsilon
               [   4,    5] (  52,           DELI_SECOL) (;)
    5  Enquanto (m < n) Initiate
-          Instru = Comando Instru
-          Comando = 'Enquanto' '(' ExpEB ')' DelimiDecla
               [   5,    1] (  17,        RESE_ENQUANTO) (Enquanto)
               [   5,    2] (  47,          DELI_OPAREN) (()
-          ExpEB = ExpOuB LExpEB
-          ExpOuB = ExpNB LExpOuB
-          ExpNB = Tiprelac
-          Tiprelac = ExpA LTiprelac
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [   5,    3] (  41,                   ID) (m)
-          FuncCallArr = epsilon
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
-          LTiprelac = OpeRela ExpA LTiprelac
-          OpeRela = 'OPE_MENORQ'
               [   5,    4] (  35,           OPE_MENORQ) (<)
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [   5,    5] (  41,                   ID) (n)
-          FuncCallArr = epsilon
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
-          LTiprelac = epsilon
-          ExpOuB = epsilon
-          LExpEB = epsilon
               [   5,    6] (  48,          DELI_CPAREN) ())
-          DelimiDecla = 'Initiate' Instru 'Halt'
               [   5,    7] (   1,        RESE_INITIATE) (Initiate)
    6  m = m * 3 + 1;
-          Instru = FuncCallAtrib Instru
               [   6,    1] (  41,                   ID) (m)
-          FuncCallAtrib = LAtrib
-          LAtrib = IdArr Atr
-          IdArr = epsilon
-          Atr =  '=' ExpCArr
               [   6,    2] (  31,             OPE_ATRI) (=)
-          ExpCArr = ExpC
-          ExpC = ExpEB LExpC
-          ExpEB = ExpOuB LExpEB
-          ExpOuB = ExpNB LExpOuB
-          ExpNB = Tiprelac
-          Tiprelac = ExpA LTiprelac
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [   6,    3] (  41,                   ID) (m)
-          FuncCallArr = epsilon
-          LParit = epsilon
-          LTiparit = OpeMulti Parit LTiparit
-          OpeMulti = 'OPE_MULTI'
               [   6,    4] (  27,            OPE_MULTI) (*)
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = Cte
-          Cte = 'CNST_INT'
               [   6,    5] (  42,             CNST_INT) (3)
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = OpArit Tiparit LExpA
-          OpeAri = 'OPE_ADI'
               [   6,    6] (  25,              OPE_ADI) (+)
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = Cte
-          Cte = 'CNST_INT'
               [   6,    7] (  42,             CNST_INT) (1)
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
-          LTiprelac = epsilon
-          ExpOuB = epsilon
-          LExpEB = epsilon
-          LexpC = epsilon
               [   6,    8] (  52,           DELI_SECOL) (;)
    7  Halt
-          Instru = epsilon
               [   7,    1] (   2,            RESE_HALT) (Halt)
    8  m = m / 3;
-          Instru = FuncCallAtrib Instru
               [   8,    1] (  41,                   ID) (m)
-          FuncCallAtrib = LAtrib
-          LAtrib = IdArr Atr
-          IdArr = epsilon
-          Atr =  '=' ExpCArr
               [   8,    2] (  31,             OPE_ATRI) (=)
-          ExpCArr = ExpC
-          ExpC = ExpEB LExpC
-          ExpEB = ExpOuB LExpEB
-          ExpOuB = ExpNB LExpOuB
-          ExpNB = Tiprelac
-          Tiprelac = ExpA LTiprelac
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [   8,    3] (  41,                   ID) (m)
-          FuncCallArr = epsilon
-          LParit = epsilon
-          LTiparit = OpeMulti Parit LTiparit
-          OpeMulti = 'OPE_DIV'
               [   8,    4] (  28,              OPE_DIV) (/)
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = Cte
-          Cte = 'CNST_INT'
               [   8,    5] (  42,             CNST_INT) (3)
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
-          LTiprelac = epsilon
-          ExpOuB = epsilon
-          LExpEB = epsilon
-          LexpC = epsilon
               [   8,    6] (  52,           DELI_SECOL) (;)
    9  Enquanto(m > 0) Initiate
-          Instru = Comando Instru
-          Comando = 'Enquanto' '(' ExpEB ')' DelimiDecla
               [   9,    1] (  17,        RESE_ENQUANTO) (Enquanto)
               [   9,    2] (  47,          DELI_OPAREN) (()
-          ExpEB = ExpOuB LExpEB
-          ExpOuB = ExpNB LExpOuB
-          ExpNB = Tiprelac
-          Tiprelac = ExpA LTiprelac
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [   9,    3] (  41,                   ID) (m)
-          FuncCallArr = epsilon
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
-          LTiprelac = OpeRela ExpA LTiprelac
-          OpeRela = 'OPE_MAIORQ'
               [   9,    4] (  36,           OPE_MAIORQ) (>)
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = Cte
-          Cte = 'CNST_INT'
               [   9,    5] (  42,             CNST_INT) (0)
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
-          LTiprelac = epsilon
-          ExpOuB = epsilon
-          LExpEB = epsilon
               [   9,    6] (  48,          DELI_CPAREN) ())
-          DelimiDecla = 'Initiate' Instru 'Halt'
               [   9,    7] (   1,        RESE_INITIATE) (Initiate)
   10  Loop (Int i, m, 1, n) Initiate
-          Instru = Comando Instru
-          Comando = 'Loop' '(' Int ',' Int ',' Int ',' Incremen ')' DelimiDecla
               [  10,    1] (  16,            RESE_LOOP) (Loop)
               [  10,    2] (  47,          DELI_OPAREN) (()
-          Int = 'Int' 'id' ';'
               [  10,    3] (   6,             RESE_INT) (Int)
               [  10,    4] (  41,                   ID) (i)
               [  10,    5] (  51,           DELI_COMMA) (,)
-          Int =  'id' ';'
               [  10,    6] (  41,                   ID) (m)
               [  10,    7] (  51,           DELI_COMMA) (,)
-          Int = 'CNST_INT'
               [  10,    8] (  42,             CNST_INT) (1)
               [  10,    9] (  51,           DELI_COMMA) (,)
-          Int = epsilon
+              [  10,   10] (  41,                   ID) (n)
               [  10,   11] (  48,          DELI_CPAREN) ())
-          DelimiDecla = 'Initiate' Instru 'Halt'
               [  10,   12] (   1,        RESE_INITIATE) (Initiate)
   11  c = array[i];
-          Instru = FuncCallAtrib Instru
               [  11,    1] (  41,                   ID) (c)
-          FuncCallAtrib = LAtrib
-          LAtrib = IdArr Atr
-          IdArr = epsilon
-          Atr =  '=' ExpCArr
               [  11,    2] (  31,             OPE_ATRI) (=)
-          ExpCArr = ExpC
-          ExpC = ExpEB LExpC
-          ExpEB = ExpOuB LExpEB
-          ExpOuB = ExpNB LExpOuB
-          ExpNB = Tiprelac
-          Tiprelac = ExpA LTiprelac
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [  11,    3] (  41,                   ID) (array)
-          FuncCallArr = '[' ExpA ']'
               [  11,    4] (  50,           DELI_OPBRA) ([)
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [  11,    5] (  41,                   ID) (i)
-          FuncCallArr = epsilon
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
               [  11,    6] (  49,           DELI_ENBRA) (])
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
-          LTiprelac = epsilon
-          ExpOuB = epsilon
-          LExpEB = epsilon
-          LexpC = epsilon
               [  11,    7] (  52,           DELI_SECOL) (;)
   12  j = i;
-          Instru = FuncCallAtrib Instru
               [  12,    1] (  41,                   ID) (j)
-          FuncCallAtrib = LAtrib
-          LAtrib = IdArr Atr
-          IdArr = epsilon
-          Atr =  '=' ExpCArr
               [  12,    2] (  31,             OPE_ATRI) (=)
-          ExpCArr = ExpC
-          ExpC = ExpEB LExpC
-          ExpEB = ExpOuB LExpEB
-          ExpOuB = ExpNB LExpOuB
-          ExpNB = Tiprelac
-          Tiprelac = ExpA LTiprelac
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [  12,    3] (  41,                   ID) (i)
-          FuncCallArr = epsilon
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
-          LTiprelac = epsilon
-          ExpOuB = epsilon
-          LExpEB = epsilon
-          LexpC = epsilon
               [  12,    4] (  52,           DELI_SECOL) (;)
   13  Enquanto (j >= m & array[j - m] > c) Initiate
-          Instru = Comando Instru
-          Comando = 'Enquanto' '(' ExpEB ')' DelimiDecla
               [  13,    1] (  17,        RESE_ENQUANTO) (Enquanto)
               [  13,    2] (  47,          DELI_OPAREN) (()
-          ExpEB = ExpOuB LExpEB
-          ExpOuB = ExpNB LExpOuB
-          ExpNB = Tiprelac
-          Tiprelac = ExpA LTiprelac
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [  13,    3] (  41,                   ID) (j)
-          FuncCallArr = epsilon
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
-          LTiprelac = OpeRela ExpA LTiprelac
-          OpeRela = 'OPE_MAIORI'
               [  13,    4] (  38,           OPE_MAIORI) (>=)
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [  13,    5] (  41,                   ID) (m)
-          FuncCallArr = epsilon
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
-          LTiprelac = epsilon
-          LExpOuB = 'OPE_CONJUN' ExpNB LExpOuB
               [  13,    6] (  23,           OPE_CONJUN) (&)
-          ExpNB = Tiprelac
-          Tiprelac = ExpA LTiprelac
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [  13,    7] (  41,                   ID) (array)
-          FuncCallArr = '[' ExpA ']'
               [  13,    8] (  50,           DELI_OPBRA) ([)
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [  13,    9] (  41,                   ID) (j)
-          FuncCallArr = epsilon
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = OpArit Tiparit LExpA
-          OpeAri = 'OPE_SUB'
               [  13,   10] (  26,              OPE_SUB) (-)
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [  13,   11] (  41,                   ID) (m)
-          FuncCallArr = epsilon
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
               [  13,   12] (  49,           DELI_ENBRA) (])
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
-          LTiprelac = OpeRela ExpA LTiprelac
-          OpeRela = 'OPE_MAIORQ'
               [  13,   13] (  36,           OPE_MAIORQ) (>)
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [  13,   14] (  41,                   ID) (c)
-          FuncCallArr = epsilon
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
-          LTiprelac = epsilon
-          ExpOuB = epsilon
-          LExpEB = epsilon
               [  13,   15] (  48,          DELI_CPAREN) ())
-          DelimiDecla = 'Initiate' Instru 'Halt'
               [  13,   16] (   1,        RESE_INITIATE) (Initiate)
   14  array[j] = array[j - m];
-          Instru = FuncCallAtrib Instru
               [  14,    1] (  41,                   ID) (array)
-          FuncCallAtrib = LAtrib
-          LAtrib = IdArr Atr
-          IdArr = ExpA
               [  14,    2] (  50,           DELI_OPBRA) ([)
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [  14,    3] (  41,                   ID) (j)
-          FuncCallArr = epsilon
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
               [  14,    4] (  49,           DELI_ENBRA) (])
-          Atr =  '=' ExpCArr
               [  14,    5] (  31,             OPE_ATRI) (=)
-          ExpCArr = ExpC
-          ExpC = ExpEB LExpC
-          ExpEB = ExpOuB LExpEB
-          ExpOuB = ExpNB LExpOuB
-          ExpNB = Tiprelac
-          Tiprelac = ExpA LTiprelac
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [  14,    6] (  41,                   ID) (array)
-          FuncCallArr = '[' ExpA ']'
               [  14,    7] (  50,           DELI_OPBRA) ([)
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [  14,    8] (  41,                   ID) (j)
-          FuncCallArr = epsilon
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = OpArit Tiparit LExpA
-          OpeAri = 'OPE_SUB'
               [  14,    9] (  26,              OPE_SUB) (-)
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [  14,   10] (  41,                   ID) (m)
-          FuncCallArr = epsilon
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
               [  14,   11] (  49,           DELI_ENBRA) (])
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
-          LTiprelac = epsilon
-          ExpOuB = epsilon
-          LExpEB = epsilon
-          LexpC = epsilon
               [  14,   12] (  52,           DELI_SECOL) (;)
   15  j = j - m;
-          Instru = FuncCallAtrib Instru
               [  15,    1] (  41,                   ID) (j)
-          FuncCallAtrib = LAtrib
-          LAtrib = IdArr Atr
-          IdArr = epsilon
-          Atr =  '=' ExpCArr
               [  15,    2] (  31,             OPE_ATRI) (=)
-          ExpCArr = ExpC
-          ExpC = ExpEB LExpC
-          ExpEB = ExpOuB LExpEB
-          ExpOuB = ExpNB LExpOuB
-          ExpNB = Tiprelac
-          Tiprelac = ExpA LTiprelac
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [  15,    3] (  41,                   ID) (j)
-          FuncCallArr = epsilon
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = OpArit Tiparit LExpA
-          OpeAri = 'OPE_SUB'
               [  15,    4] (  26,              OPE_SUB) (-)
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [  15,    5] (  41,                   ID) (m)
-          FuncCallArr = epsilon
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
-          LTiprelac = epsilon
-          ExpOuB = epsilon
-          LExpEB = epsilon
-          LexpC = epsilon
               [  15,    6] (  52,           DELI_SECOL) (;)
   16  Halt
-          Instru = epsilon
               [  16,    1] (   2,            RESE_HALT) (Halt)
   17  array[j] = c;
-          Instru = FuncCallAtrib Instru
               [  17,    1] (  41,                   ID) (array)
-          FuncCallAtrib = LAtrib
-          LAtrib = IdArr Atr
-          IdArr = ExpA
               [  17,    2] (  50,           DELI_OPBRA) ([)
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [  17,    3] (  41,                   ID) (j)
-          FuncCallArr = epsilon
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
               [  17,    4] (  49,           DELI_ENBRA) (])
-          Atr =  '=' ExpCArr
               [  17,    5] (  31,             OPE_ATRI) (=)
-          ExpCArr = ExpC
-          ExpC = ExpEB LExpC
-          ExpEB = ExpOuB LExpEB
-          ExpOuB = ExpNB LExpOuB
-          ExpNB = Tiprelac
-          Tiprelac = ExpA LTiprelac
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [  17,    6] (  41,                   ID) (c)
-          FuncCallArr = epsilon
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
-          LTiprelac = epsilon
-          ExpOuB = epsilon
-          LExpEB = epsilon
-          LexpC = epsilon
               [  17,    7] (  52,           DELI_SECOL) (;)
   18  Halt
-          Instru = epsilon
               [  18,    1] (   2,            RESE_HALT) (Halt)
   19  m = m / 2;
-          Instru = FuncCallAtrib Instru
               [  19,    1] (  41,                   ID) (m)
-          FuncCallAtrib = LAtrib
-          LAtrib = IdArr Atr
-          IdArr = epsilon
-          Atr =  '=' ExpCArr
               [  19,    2] (  31,             OPE_ATRI) (=)
-          ExpCArr = ExpC
-          ExpC = ExpEB LExpC
-          ExpEB = ExpOuB LExpEB
-          ExpOuB = ExpNB LExpOuB
-          ExpNB = Tiprelac
-          Tiprelac = ExpA LTiprelac
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [  19,    3] (  41,                   ID) (m)
-          FuncCallArr = epsilon
-          LParit = epsilon
-          LTiparit = OpeMulti Parit LTiparit
-          OpeMulti = 'OPE_DIV'
               [  19,    4] (  28,              OPE_DIV) (/)
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = Cte
-          Cte = 'CNST_INT'
               [  19,    5] (  42,             CNST_INT) (2)
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
-          LTiprelac = epsilon
-          ExpOuB = epsilon
-          LExpEB = epsilon
-          LexpC = epsilon
               [  19,    6] (  52,           DELI_SECOL) (;)
   20  Halt
-          Instru = epsilon
               [  20,    1] (   2,            RESE_HALT) (Halt)
   21  Retorna;
-          Instru = Comando Instru
-          Comando = 'Retorna' Return ';' Instru
               [  21,    1] (   5,         RESE_RETORNA) (Retorna)
               [  21,    2] (  52,           DELI_SECOL) (;)
   22  Halt
-          Instru = epsilon
-          Instru = epsilon
               [  22,    1] (   2,            RESE_HALT) (Halt)
   23
   24  Funcao Vazio Central() Initiate
-          S = FunDecla S
-          FunDecla = 'function' TipoFun FunNome '(' ParamsDecla ')' DelimiDecla
               [  24,    1] (   4,          RESE_FUNCAO) (Funcao)
-          TipoFun = 'void'
               [  24,    2] (  11,           RESE_VAZIO) (Vazio)
-          FunNome = 'Central'
               [  24,    3] (   3,         RESE_CENTRAL) (Central)
               [  24,    4] (  47,          DELI_OPAREN) (()
-          ParamDecla = epsilon
               [  24,    5] (  48,          DELI_CPAREN) ())
-          DelimiDecla = 'Initiate' Instru 'Halt'
               [  24,    6] (   1,        RESE_INITIATE) (Initiate)
   25  Int n;
-          Instru = VarDecla Instru
-          VarDecla = Tipo ListId ';'
-          Tipo = 'Int'
               [  25,    1] (   6,             RESE_INT) (Int)
-          ListId = AtribOuId LListID
-          AtrId =  = 'id' IdArr Atr
               [  25,    2] (  41,                   ID) (n)
-          IdArr = epsilon
-          Atr = epsilon
-          LListId = epsilon
               [  25,    3] (  52,           DELI_SECOL) (;)
   26  Int atual;
-          Instru = VarDecla Instru
-          VarDecla = Tipo ListId ';'
-          Tipo = 'Int'
               [  26,    1] (   6,             RESE_INT) (Int)
-          ListId = AtribOuId LListID
-          AtrId =  = 'id' IdArr Atr
               [  26,    2] (  41,                   ID) (atual)
-          IdArr = epsilon
-          Atr = epsilon
-          LListId = epsilon
               [  26,    3] (  52,           DELI_SECOL) (;)
   27  Escrever("Tamanho do array:");
-          Instru = Comando Instru
-          Comando = 'Escrever' '(' ParamCall ')' ';'
               [  27,    1] (  21,        RESE_ESCREVER) (Escrever)
               [  27,    2] (  47,          DELI_OPAREN) (()
-          ParamCall = ExpC LParamCall
-          ExpC = ExpEB LExpC
-          ExpEB = ExpOuB LExpEB
-          ExpOuB = ExpNB LExpOuB
-          ExpNB = Tiprelac
-          Tiprelac = ExpA LTiprelac
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = Cte
-          Cte = 'CNST_STR'
               [  27,    3] (  46,             CNST_STR) ("Tamanho do array:")
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
-          LTiprelac = epsilon
-          ExpOuB = epsilon
-          LExpEB = epsilon
-          LexpC = epsilon
-          LParamCall = epsilon
               [  27,    4] (  48,          DELI_CPAREN) ())
               [  27,    5] (  52,           DELI_SECOL) (;)
   28  Ler(n);
-          Instru = Comando Instru
-          Comando = 'Ler' '(' Ler ')' ';'
               [  28,    1] (  20,             RESE_LER) (Ler)
               [  28,    2] (  47,          DELI_OPAREN) (()
-          Ler =  Id LLer
-          Id =  'id' ArrId
               [  28,    3] (  41,                   ID) (n)
-          IdArr = epsilon
-          LLer = epsilon
               [  28,    4] (  48,          DELI_CPAREN) ())
               [  28,    5] (  52,           DELI_SECOL) (;)
   29  Int array[n];
-          Instru = VarDecla Instru
-          VarDecla = Tipo ListId ';'
-          Tipo = 'Int'
               [  29,    1] (   6,             RESE_INT) (Int)
-          ListId = AtribOuId LListID
-          AtrId =  = 'id' IdArr Atr
               [  29,    2] (  41,                   ID) (array)
-          IdArr = ExpA
               [  29,    3] (  50,           DELI_OPBRA) ([)
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [  29,    4] (  41,                   ID) (n)
-          FuncCallArr = epsilon
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
               [  29,    5] (  49,           DELI_ENBRA) (])
-          Atr = epsilon
-          LListId = epsilon
               [  29,    6] (  52,           DELI_SECOL) (;)
   30  Escrever("Elementos do array: ");
-          Instru = Comando Instru
-          Comando = 'Escrever' '(' ParamCall ')' ';'
               [  30,    1] (  21,        RESE_ESCREVER) (Escrever)
               [  30,    2] (  47,          DELI_OPAREN) (()
-          ParamCall = ExpC LParamCall
-          ExpC = ExpEB LExpC
-          ExpEB = ExpOuB LExpEB
-          ExpOuB = ExpNB LExpOuB
-          ExpNB = Tiprelac
-          Tiprelac = ExpA LTiprelac
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = Cte
-          Cte = 'CNST_STR'
               [  30,    3] (  46,             CNST_STR) ("Elementos do array: ")
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
-          LTiprelac = epsilon
-          ExpOuB = epsilon
-          LExpEB = epsilon
-          LexpC = epsilon
-          LParamCall = epsilon
               [  30,    4] (  48,          DELI_CPAREN) ())
               [  30,    5] (  52,           DELI_SECOL) (;)
   31  Loop (Int i, 0, 1, n) Initiate
-          Instru = Comando Instru
-          Comando = 'Loop' '(' Int ',' Int ',' Int ',' Incremen ')' DelimiDecla
               [  31,    1] (  16,            RESE_LOOP) (Loop)
               [  31,    2] (  47,          DELI_OPAREN) (()
-          Int = 'Int' 'id' ';'
               [  31,    3] (   6,             RESE_INT) (Int)
               [  31,    4] (  41,                   ID) (i)
               [  31,    5] (  51,           DELI_COMMA) (,)
-          Int = 'CNST_INT'
               [  31,    6] (  42,             CNST_INT) (0)
               [  31,    7] (  51,           DELI_COMMA) (,)
-          Int = 'CNST_INT'
               [  31,    8] (  42,             CNST_INT) (1)
               [  31,    9] (  51,           DELI_COMMA) (,)
-          Int = epsilon
+              [  31,   10] (  41,                   ID) (n)
               [  31,   11] (  48,          DELI_CPAREN) ())
-          DelimiDecla = 'Initiate' Instru 'Halt'
               [  31,   12] (   1,        RESE_INITIATE) (Initiate)
   32  Ler(array[i]);
-          Instru = Comando Instru
-          Comando = 'Ler' '(' Ler ')' ';'
               [  32,    1] (  20,             RESE_LER) (Ler)
               [  32,    2] (  47,          DELI_OPAREN) (()
-          Ler =  Id LLer
-          Id =  'id' ArrId
               [  32,    3] (  41,                   ID) (array)
-          IdArr = ExpA
               [  32,    4] (  50,           DELI_OPBRA) ([)
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [  32,    5] (  41,                   ID) (i)
-          FuncCallArr = epsilon
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
               [  32,    6] (  49,           DELI_ENBRA) (])
-          LLer = epsilon
               [  32,    7] (  48,          DELI_CPAREN) ())
               [  32,    8] (  52,           DELI_SECOL) (;)
   33  Halt
-          Instru = epsilon
               [  33,    1] (   2,            RESE_HALT) (Halt)
   34  Escrever("Array: ");
-          Instru = Comando Instru
-          Comando = 'Escrever' '(' ParamCall ')' ';'
               [  34,    1] (  21,        RESE_ESCREVER) (Escrever)
               [  34,    2] (  47,          DELI_OPAREN) (()
-          ParamCall = ExpC LParamCall
-          ExpC = ExpEB LExpC
-          ExpEB = ExpOuB LExpEB
-          ExpOuB = ExpNB LExpOuB
-          ExpNB = Tiprelac
-          Tiprelac = ExpA LTiprelac
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = Cte
-          Cte = 'CNST_STR'
               [  34,    3] (  46,             CNST_STR) ("Array: ")
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
-          LTiprelac = epsilon
-          ExpOuB = epsilon
-          LExpEB = epsilon
-          LexpC = epsilon
-          LParamCall = epsilon
               [  34,    4] (  48,          DELI_CPAREN) ())
               [  34,    5] (  52,           DELI_SECOL) (;)
   35  Loop (Int i, 0, 1, n) Initiate
-          Instru = Comando Instru
-          Comando = 'Loop' '(' Int ',' Int ',' Int ',' Incremen ')' DelimiDecla
               [  35,    1] (  16,            RESE_LOOP) (Loop)
               [  35,    2] (  47,          DELI_OPAREN) (()
-          Int = 'Int' 'id' ';'
               [  35,    3] (   6,             RESE_INT) (Int)
               [  35,    4] (  41,                   ID) (i)
               [  35,    5] (  51,           DELI_COMMA) (,)
-          Int = 'CNST_INT'
               [  35,    6] (  42,             CNST_INT) (0)
               [  35,    7] (  51,           DELI_COMMA) (,)
-          Int = 'CNST_INT'
               [  35,    8] (  42,             CNST_INT) (1)
               [  35,    9] (  51,           DELI_COMMA) (,)
-          Int = epsilon
+              [  35,   10] (  41,                   ID) (n)
               [  35,   11] (  48,          DELI_CPAREN) ())
-          DelimiDecla = 'Initiate' Instru 'Halt'
               [  35,   12] (   1,        RESE_INITIATE) (Initiate)
   36  atual = array[i];
-          Instru = FuncCallAtrib Instru
               [  36,    1] (  41,                   ID) (atual)
-          FuncCallAtrib = LAtrib
-          LAtrib = IdArr Atr
-          IdArr = epsilon
-          Atr =  '=' ExpCArr
               [  36,    2] (  31,             OPE_ATRI) (=)
-          ExpCArr = ExpC
-          ExpC = ExpEB LExpC
-          ExpEB = ExpOuB LExpEB
-          ExpOuB = ExpNB LExpOuB
-          ExpNB = Tiprelac
-          Tiprelac = ExpA LTiprelac
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [  36,    3] (  41,                   ID) (array)
-          FuncCallArr = '[' ExpA ']'
               [  36,    4] (  50,           DELI_OPBRA) ([)
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [  36,    5] (  41,                   ID) (i)
-          FuncCallArr = epsilon
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
               [  36,    6] (  49,           DELI_ENBRA) (])
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
-          LTiprelac = epsilon
-          ExpOuB = epsilon
-          LExpEB = epsilon
-          LexpC = epsilon
               [  36,    7] (  52,           DELI_SECOL) (;)
   37  Escreverpl(atual);
-          Instru = Comando Instru
-          Comando = 'Escreverpl' '(' ParamCall ')' ';'
               [  37,    1] (  22,      RESE_ESCREVERPL) (Escreverpl)
               [  37,    2] (  47,          DELI_OPAREN) (()
-          ParamCall = ExpC LParamCall
-          ExpC = ExpEB LExpC
-          ExpEB = ExpOuB LExpEB
-          ExpOuB = ExpNB LExpOuB
-          ExpNB = Tiprelac
-          Tiprelac = ExpA LTiprelac
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [  37,    3] (  41,                   ID) (atual)
-          FuncCallArr = epsilon
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
-          LTiprelac = epsilon
-          ExpOuB = epsilon
-          LExpEB = epsilon
-          LexpC = epsilon
-          LParamCall = epsilon
               [  37,    4] (  48,          DELI_CPAREN) ())
               [  37,    5] (  52,           DELI_SECOL) (;)
   38  Halt
-          Instru = epsilon
               [  38,    1] (   2,            RESE_HALT) (Halt)
   39  shellsort(array[n], n);
-          Instru = FuncCallAtrib Instru
               [  39,    1] (  41,                   ID) (shellsort)
-          FuncCallAtrib = FuncCall
               [  39,    2] (  47,          DELI_OPAREN) (()
-          FuncCall = '(' ParamCall ')' ';'
-              [  39,    2] (  47,          DELI_OPAREN) (()
-          ParamCall = ExpC LParamCall
-          ExpC = ExpEB LExpC
-          ExpEB = ExpOuB LExpEB
-          ExpOuB = ExpNB LExpOuB
-          ExpNB = Tiprelac
-          Tiprelac = ExpA LTiprelac
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [  39,    3] (  41,                   ID) (array)
-          FuncCallArr = '[' ExpA ']'
               [  39,    4] (  50,           DELI_OPBRA) ([)
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [  39,    5] (  41,                   ID) (n)
-          FuncCallArr = epsilon
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
               [  39,    6] (  49,           DELI_ENBRA) (])
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
-          LTiprelac = epsilon
-          ExpOuB = epsilon
-          LExpEB = epsilon
-          LexpC = epsilon
-          LParamCall = ',' ParamCall
               [  39,    7] (  51,           DELI_COMMA) (,)
-          ParamCall = ExpC LParamCall
-          ExpC = ExpEB LExpC
-          ExpEB = ExpOuB LExpEB
-          ExpOuB = ExpNB LExpOuB
-          ExpNB = Tiprelac
-          Tiprelac = ExpA LTiprelac
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [  39,    8] (  41,                   ID) (n)
-          FuncCallArr = epsilon
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
-          LTiprelac = epsilon
-          ExpOuB = epsilon
-          LExpEB = epsilon
-          LexpC = epsilon
-          LParamCall = epsilon
               [  39,    9] (  48,          DELI_CPAREN) ())
               [  39,   10] (  52,           DELI_SECOL) (;)
   40  Escrever("Valores ordenados: ");
-          Instru = Comando Instru
-          Comando = 'Escrever' '(' ParamCall ')' ';'
               [  40,    1] (  21,        RESE_ESCREVER) (Escrever)
               [  40,    2] (  47,          DELI_OPAREN) (()
-          ParamCall = ExpC LParamCall
-          ExpC = ExpEB LExpC
-          ExpEB = ExpOuB LExpEB
-          ExpOuB = ExpNB LExpOuB
-          ExpNB = Tiprelac
-          Tiprelac = ExpA LTiprelac
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = Cte
-          Cte = 'CNST_STR'
               [  40,    3] (  46,             CNST_STR) ("Valores ordenados: ")
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
-          LTiprelac = epsilon
-          ExpOuB = epsilon
-          LExpEB = epsilon
-          LexpC = epsilon
-          LParamCall = epsilon
               [  40,    4] (  48,          DELI_CPAREN) ())
               [  40,    5] (  52,           DELI_SECOL) (;)
   41
   42  Loop (Int i, 0, 1, n) Initiate
-          Instru = Comando Instru
-          Comando = 'Loop' '(' Int ',' Int ',' Int ',' Incremen ')' DelimiDecla
               [  42,    1] (  16,            RESE_LOOP) (Loop)
               [  42,    2] (  47,          DELI_OPAREN) (()
-          Int = 'Int' 'id' ';'
               [  42,    3] (   6,             RESE_INT) (Int)
               [  42,    4] (  41,                   ID) (i)
               [  42,    5] (  51,           DELI_COMMA) (,)
-          Int = 'CNST_INT'
               [  42,    6] (  42,             CNST_INT) (0)
               [  42,    7] (  51,           DELI_COMMA) (,)
-          Int = 'CNST_INT'
               [  42,    8] (  42,             CNST_INT) (1)
               [  42,    9] (  51,           DELI_COMMA) (,)
-          Int = epsilon
+              [  42,   10] (  41,                   ID) (n)
               [  42,   11] (  48,          DELI_CPAREN) ())
-          DelimiDecla = 'Initiate' Instru 'Halt'
               [  42,   12] (   1,        RESE_INITIATE) (Initiate)
   43  atual = array[i];
-          Instru = FuncCallAtrib Instru
               [  43,    1] (  41,                   ID) (atual)
-          FuncCallAtrib = LAtrib
-          LAtrib = IdArr Atr
-          IdArr = epsilon
-          Atr =  '=' ExpCArr
               [  43,    2] (  31,             OPE_ATRI) (=)
-          ExpCArr = ExpC
-          ExpC = ExpEB LExpC
-          ExpEB = ExpOuB LExpEB
-          ExpOuB = ExpNB LExpOuB
-          ExpNB = Tiprelac
-          Tiprelac = ExpA LTiprelac
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [  43,    3] (  41,                   ID) (array)
-          FuncCallArr = '[' ExpA ']'
               [  43,    4] (  50,           DELI_OPBRA) ([)
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [  43,    5] (  41,                   ID) (i)
-          FuncCallArr = epsilon
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
               [  43,    6] (  49,           DELI_ENBRA) (])
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
-          LTiprelac = epsilon
-          ExpOuB = epsilon
-          LExpEB = epsilon
-          LexpC = epsilon
               [  43,    7] (  52,           DELI_SECOL) (;)
   44  Escreverpl(atual);
-          Instru = Comando Instru
-          Comando = 'Escreverpl' '(' ParamCall ')' ';'
               [  44,    1] (  22,      RESE_ESCREVERPL) (Escreverpl)
               [  44,    2] (  47,          DELI_OPAREN) (()
-          ParamCall = ExpC LParamCall
-          ExpC = ExpEB LExpC
-          ExpEB = ExpOuB LExpEB
-          ExpOuB = ExpNB LExpOuB
-          ExpNB = Tiprelac
-          Tiprelac = ExpA LTiprelac
-          ExpA = Tiparit LExpA
-          Tiparit = Parit LTiparit
-          Parit = Farit LParit
-          Farit = LFarit
-          LFarit = IdOrFun
-          IdOrFun = 'id' FuncCallArr
               [  44,    3] (  41,                   ID) (atual)
-          FuncCallArr = epsilon
-          LParit = epsilon
-          LTiparit = epsilon
-          LExpA = epsilon
-          LTiprelac = epsilon
-          ExpOuB = epsilon
-          LExpEB = epsilon
-          LexpC = epsilon
-          LParamCall = epsilon
               [  44,    4] (  48,          DELI_CPAREN) ())
               [  44,    5] (  52,           DELI_SECOL) (;)
   45  Halt
-          Instru = epsilon
               [  45,    1] (   2,            RESE_HALT) (Halt)
   46
   47  Retorna;
-          Instru = Comando Instru
-          Comando = 'Retorna' Return ';' Instru
               [  47,    1] (   5,         RESE_RETORNA) (Retorna)
               [  47,    2] (  52,           DELI_SECOL) (;)
   48  Halt
-          Instru = epsilon
-          Instru = epsilon
               [  48,    1] (   2,            RESE_HALT) (Halt)
-          S = epsilon
               [  48,    1] (  53,             DELI_EOF) (EOF)
